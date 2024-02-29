@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<title>Quotes App</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/style.css">
+		
+	</head>
+	<body>
+		<h1>Quotes: Node.js CRUD API with Express and MongoDB</h1>
+
+		<!-- Quotes -->
+		<h2>Add New Quote</h2>
+		<form action="/quotes" method="POST">
+		
+			<label for="category">Category:</label><br>
+			<input type="text" id="category" name="category"><br>
+		
+			<label for="author">Author:</label><br>
+			<input type="text" id="author" name="author" required><br>
+		
+			<label for="quote">Quote:</label><br>
+			<textarea id="quote" name="quote" rows="4" cols="50" required></textarea><br>
+		
+			<!-- Add more fields as needed -->
+		
+			<button type="submit">Add Quote</button>
+		</form>
+
+		<!-- <script type="text/javascript" src="js/main.js"></script> -->
+
+	</body>
+</html>

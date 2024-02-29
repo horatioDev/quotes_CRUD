@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<title>Quotes App | Edit Quote</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<h1>Quotes: Node.js CRUD API with Express and MongoDB</h1>
+
+		<!-- Quotes -->
+		<h2>Edit Quote</h2>
+		<form id="editQuoteForm" action="/quotes/<%= quote._id %>/edit" method="PUT">
+		
+			<label for="category">Category:</label><br>
+			<input type="text" id="category" name="category" value="<%= quote.category %>"><br>
+		
+			<label for="author">Author:</label><br>
+			<input type="text" id="author" name="author" value="<%= quote.author %>" required><br>
+		
+			<label for="quote">Quote:</label><br>
+			<textarea id="quote" name="quote" rows="4" cols="50" required><%= quote.quote %></textarea><br>
+		
+			<!-- Add more fields as needed -->
+		
+			 <button data-id="<%= quote._id %>" id="save-btn" class="btn btn-succes" type="submit">Save Changes</button>
+			<button data-id="<%= quote._id %>" id="cancel-btn" class="btn btn-succes" type="submit">Cancel</button>
+		</form>
+
+		<script src="/main.js"></script>
+	</body>
+</html>
